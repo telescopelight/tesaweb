@@ -3,25 +3,78 @@
 <head>
     <meta charset="utf-16" />
     <title>Main page</title>
+	<script type="text/javascript" src="/telescopelight/js/colors.js"></script>
+	<script type="text/javascript" src="/telescopelight/js/links.js"></script>
+	
+	<!--2023 09 23 
+	수정사항
+	아이콘식 배열 추가
+	링크 및 스타일 리팩토링
+	링크 절대화
+	
+	필요사항
+	페이지 가로배열 필요
+	아이콘 숨기기 기능 필요
+	글쓰기 기능 추가 필요
+	사진 갤러리화
+	컬러 파레트 및 디자인 통일성 필요
+	*/
+
+	<script src="https://code.jquery.com/jquery-3.7.1.js" 
+			integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+			crossorigin="anonymous"></script>
+	<!-- css 부분인듯 해서 분리 안함 -->
+	<style type="text/css">
+	 /* link - 아직 클릭하지 않은 경우 red 색상 설정 */
+	 a:link { color: inherit; text-decoration: none;}	
+	 /* visited - 한번 클릭하거나 전에 클릭한적 있을 경우 #c71d44 설정 */
+	 a:visited { color: inherit; text-decoration: none;}	
+	 /* hover - 마우스를 해당 링크에 위치했을 경우 #006DD7 설정 */
+	 a:hover { color: blueviolet; text-decoration: underline;}
+		
+		h1{
+			font-weight: bold;
+			font-size: 40px;
+			font-size-adjust: 100%;
+			text-align: center;
+		}
+		body{
+			font-weight: bold;
+			font-size: 18px;
+			font-size-adjust: 100%;
+		}
+		p{
+			float: left;
+			padding-left: 1em; 
+		}
+	</style>
+	
 </head>
 
 <body>
+	<script>
+	Body.setBackgroundColor('beige');
+	Body.setColor('black');
+	nightDaySystem();
+
+	</script>
+	
+	<input type="button" value="adaptive_mode" onclick="nightDaySystem(this)">
+		   
     <header>
     <h1><a href="index.html">Telescopelight World</a></h1>
     </header>
 
-    <nav>
-    <ol>
-        <li><a href="photo.html">telescopic Photoes</a></li>
-        <li><a href="https://port-3000-php-mango-vulture-rngyqhs766434.preview.codeanywhere.com/opentutorials/record.html">telescopic Records</a></li> 
-        <li><a href="https://port-3000-php-mango-vulture-rngyqhs766434.preview.codeanywhere.com/opentutorials/art.html">telescopic Artsworks</a></li>
-        <li><a href="https://port-3000-php-mango-vulture-rngyqhs766434.preview.codeanywhere.com/opentutorials/schedule.html">Scheduler</a></li>
-        <li><a href="https://port-3000-php-mango-vulture-rngyqhs766434.preview.codeanywhere.com/opentutorials/codenote.html">Code notes</a></li>
 
-    </ol>
-    </nav>
-
-
-
+	<!--프리뷰 사진, photo페이지 완성 시 링크수정(랜덤사진 추출)-->
+	<div>
+		<img src="https://c.pxhere.com/photos/bb/3c/stars_night_milky_way_sky_night_sky_space_dark_blue-853207.jpg!d" 
+			 srcset="https://c.pxhere.com/photos/bb/3c/stars_night_milky_way_sky_night_sky_space_dark_blue-853207.jpg!d" 
+			 alt="은하수" width="20%">
+	</div>
+	<script>
+		Showlinks();
+	</script>
+	
 </body>
 </html>
